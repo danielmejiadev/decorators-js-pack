@@ -1,0 +1,52 @@
+{
+  "name": "decorators-js-utils",
+  "version": "0.2.0",
+  "description": "A pack of decorators useful for avoid duplicate code",
+  "main": "dist/index.js",
+  "license": "ISC",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc --p tsconfig.build.json",
+    "publish": "npm publish",
+    "publish:local": "yarn build && yalc push",
+    "test": "jest --verbose --config jest.config.json --no-cache -u --coverage",
+    "test:watch": "jest --config=jest.config.json --watch --coverage",
+    "lint": "eslint --ext .js,.ts src --format html --output-file reports/eslint.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danielmejiadev/decorators-js-utils.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "decorators",
+    "package"
+  ],
+  "author": "Daniel Mejia",
+  "homepage": "https://github.com/danielmejiadev/decorators-js-utils",
+  "devDependencies": {
+    "@babel/cli": "7.10.1",
+    "@babel/core": "7.10.2",
+    "@babel/plugin-proposal-decorators": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-typescript": "7.10.1",
+    "@babel/runtime": "7.6.2",
+    "@types/jest": "24.0.24",
+    "@typescript-eslint/eslint-plugin": "3.0.0",
+    "@typescript-eslint/parser": "3.0.0",
+    "babel-jest": "26.0.1",
+    "babel-plugin-module-resolver": "4.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.2",
+    "jest": "26.0.1",
+    "prettier": "2.0.4",
+    "typescript": "3.8.3",
+    "typescript-transform-paths": "1.1.14"
+  },
+  "dependencies": {
+    "humps": "2.0.1"
+  }
+}
